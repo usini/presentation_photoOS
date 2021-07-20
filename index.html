@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Présentation PhotoOS</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="documents/01_Slide_Introduction.png"></section>
+				<section data-background-video="documents/02_Présentation_Usini.mp4"></section>
+				<section data-background-image="documents/03_Slide_Sommaire.png"></section>
+				<section data-background-image="documents/04_Slide_Parcours_ProbeTools.png"></section>
+				<section data-background-video="documents/05_Carte_Interaction_Research_Studio.mp4"></section>
+				<section data-background-image="documents/06_Slide_Interaction_Research_Studio.png"></section>
+				<section data-background-video="documents/07_Projets_Interaction_Research_Studio.mp4"></section>
+				<section data-background-image="documents/08_Slide_Visioncam.png"></section>
+				<section data-background-video="documents/09_Démonstration_Probetools.mp4"></section>
+				<section data-background-video="documents/10_Carte_Raspberry_Pi_Foundation.mp4"></section>
+				<section data-background-image="documents/11_Slide_Raspberry_Pi.png"></section>
+				<section data-background-image="documents/12_Slide_CEO_RaspberryPi_Eben_Upton.png"></section>
+				<section data-background-image="documents/13_Slide_Schema_RaspberryPi3.png"></section>
+				<section data-background-video="documents/14_Carte_Adafruit.mp4"></section>
+				<section data-background-image="documents/15_Slide_Adafruit.png"></section>
+				<section data-background-image="documents/16_Slide_Adafruit_Schema_PiTFT.png"></section>
+				<section data-background-video="documents/17_Adafruit_Vue_Pcb_Fusion360_PiTFT .mp4"></section>
+				<section data-background-image="documents/18_Slide_A_Interieur_De_Lappareil.png"></section>
+				<section data-background-image="documents/19_Slide_Fonctionnement_Camera.png"></section>
+				<section data-background-image="documents/20_Slide_Conversion_Image_Tableau.png"></section>
+				<section data-background-video="documents/21_Tableau_De_Données_Opencv.mp4"></section>
+				<section data-background-image="documents/22_Tutoriels_OpenCV.png"></section>
+				<section data-background-image="documents/23_Slide_Amelioration_Visioncam.png"></section>
+				<section data-background-video="documents/24_Demonstration_Modélisation_3D_Fusion360.mp4"></section>
+				<section data-background-image="documents/25_Slide_Impression3D.png"></section>
+				<section data-background-video="documents/26_Presentation_Visual_Studio_Code.mp4"></section>
+				<section data-background-image="documents/27_Slide_Questions.png"></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ ]
+			});
+
+		(new MutationObserver(function(mutations, observer) {
+			mutations.reduce(function(accumulator, current) {
+				return accumulator.concat(Array.prototype.slice.call(
+					current.addedNodes));
+			}, []).forEach(function(el) {
+				if(/video/i.test(el.tagName)) {
+					el.controls = true;
+				}
+			});
+		})).observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+
+		/*
+						<section data-background-iframe="opencv/face-detection/index.html" data-background-interactive></section>
+				<section data-background-iframe="opencv/video-processing/index.html" data-background-interactive></section>
+				*/
+		</script>
+	</body>
+</html>
